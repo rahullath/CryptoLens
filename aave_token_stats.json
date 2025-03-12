@@ -1,0 +1,107 @@
+{
+  "protocol": "Aave",
+  "tokens": {
+    "AAVE": {
+      "name": "Aave",
+      "symbol": "AAVE",
+      "category": "token",
+      "price_usd": 172.56000624621188,
+      "market_cap": 2603634359.119721,
+      "volume_24h": 452610857.8582989,
+      "percent_change_24h": -4.02663354,
+      "percent_change_7d": -20.82160943,
+      "circulating_supply": 15088283.87155252
+    },
+    "USDC": {
+      "name": "USDC",
+      "symbol": "USDC",
+      "category": "token",
+      "price_usd": 0.9999193496571805,
+      "market_cap": 58194700300.83318,
+      "volume_24h": 12546412324.145838,
+      "percent_change_24h": 0.00493187,
+      "percent_change_7d": -0.02445374,
+      "circulating_supply": 58199394101.91939
+    },
+    "USDT": {
+      "name": "Tether USDt",
+      "symbol": "USDT",
+      "category": "token",
+      "price_usd": 0.9998457351597644,
+      "market_cap": 143160064566.1232,
+      "volume_24h": 90246218314.2505,
+      "percent_change_24h": -0.08093262,
+      "percent_change_7d": -0.04329264,
+      "circulating_supply": 143182152538.00906
+    },
+    "DAI": {
+      "name": "Dai",
+      "symbol": "DAI",
+      "category": "token",
+      "price_usd": 1.0001966266431668,
+      "market_cap": 5366437679.855002,
+      "volume_24h": 126000345.69444765,
+      "percent_change_24h": 0.00928951,
+      "percent_change_7d": -0.00134712,
+      "circulating_supply": 5365382702.664872
+    },
+    "WETH": {
+      "name": "WETH",
+      "symbol": "WETH",
+      "category": "token",
+      "price_usd": 1898.9712974555673,
+      "market_cap": 6409631228.233286,
+      "volume_24h": 1018835659.518054,
+      "percent_change_24h": -1.0320628,
+      "percent_change_7d": -15.16417773,
+      "circulating_supply": 3375317.5926469
+    },
+    "WBTC": {
+      "name": "Wrapped Bitcoin",
+      "symbol": "WBTC",
+      "category": "token",
+      "price_usd": 82349.5559343361,
+      "market_cap": 10637710298.782446,
+      "volume_24h": 358534647.191918,
+      "percent_change_24h": 1.13296188,
+      "percent_change_7d": -8.08208418,
+      "circulating_supply": 129177.50652189
+    },
+    "LINK": {
+      "name": "Chainlink",
+      "symbol": "LINK",
+      "category": "token",
+      "price_usd": 13.274087185039184,
+      "market_cap": 8470194640.561217,
+      "volume_24h": 684649763.738992,
+      "percent_change_24h": 1.98898354,
+      "percent_change_7d": -17.52396727,
+      "circulating_supply": 638099970.4527867
+    },
+    "WMATIC": {
+      "name": "Wrapped Matic",
+      "symbol": "WMATIC",
+      "category": "token",
+      "price_usd": 0.2169758045916512,
+      "market_cap": 32856120.9266936,
+      "volume_24h": 8093894.05625333,
+      "percent_change_24h": 2.68642742,
+      "percent_change_7d": -15.18882355,
+      "circulating_supply": 151427579.62588903
+    },
+    "WAVAX": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX",
+      "category": "token",
+      "price_usd": 17.92820805013764,
+      "market_cap": 131500048.09936313,
+      "volume_24h": 92687137.29427388,
+      "percent_change_24h": 4.2375971,
+      "percent_change_7d": -15.11296982,
+      "circulating_supply": 7334812.70027729
+    }
+  },
+  "token_count": 9,
+  "total_market_cap": 235006729242.53412,
+  "avg_24h_change": 0.5467291511111112
+}

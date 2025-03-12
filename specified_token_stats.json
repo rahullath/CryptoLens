@@ -1,0 +1,123 @@
+{
+  "AAVE": {
+    "name": "Aave",
+    "symbol": "AAVE",
+    "category": "token",
+    "price_usd": 173.1102354547116,
+    "market_cap": 2611936373.6119843,
+    "volume_24h": 452908005.83163273,
+    "percent_change_24h": -3.13759603,
+    "percent_change_7d": -20.71015705,
+    "circulating_supply": 15088283.87155252
+  },
+  "LDO": {
+    "name": "Lido DAO",
+    "symbol": "LDO",
+    "category": "token",
+    "price_usd": 0.9212681101228064,
+    "market_cap": 826932739.2670506,
+    "volume_24h": 180142959.13993773,
+    "percent_change_24h": 5.91312418,
+    "percent_change_7d": -20.68218857,
+    "circulating_supply": 897602695.87191
+  },
+  "JUP": {
+    "name": "Jupiter",
+    "symbol": "JUP",
+    "category": "token",
+    "price_usd": 0.5195240837599777,
+    "market_cap": 1397993129.473771,
+    "volume_24h": 67907251.31683545,
+    "percent_change_24h": 3.9855127,
+    "percent_change_7d": -20.80788912,
+    "circulating_supply": 2690911111.1
+  },
+  "COMP": {
+    "name": "Compound",
+    "symbol": "COMP",
+    "category": "token",
+    "price_usd": 41.1360439148045,
+    "market_cap": 365981804.8350183,
+    "volume_24h": 45877463.15937474,
+    "percent_change_24h": 3.07166605,
+    "percent_change_7d": -20.19374014,
+    "circulating_supply": 8896864.4041948
+  },
+  "FLUID": {
+    "name": "Fluid",
+    "symbol": "FLUID",
+    "category": "token",
+    "price_usd": 5.023665850949633,
+    "market_cap": 0,
+    "volume_24h": 630863.96716857,
+    "percent_change_24h": 0.69494386,
+    "percent_change_7d": -18.79769043,
+    "circulating_supply": 0
+  },
+  "S": {
+    "name": "Sonic (prev. FTM)",
+    "symbol": "S",
+    "category": "token",
+    "price_usd": 0.4352761722359362,
+    "market_cap": 1253595376.0394962,
+    "volume_24h": 137061746.34878632,
+    "percent_change_24h": 1.61466071,
+    "percent_change_7d": -25.82372715,
+    "circulating_supply": 2880000000
+  },
+  "ETH": {
+    "name": "Ethereum",
+    "symbol": "ETH",
+    "category": "coin",
+    "price_usd": 1910.427751184098,
+    "market_cap": 230415204230.2828,
+    "volume_24h": 26823765402.008167,
+    "percent_change_24h": -0.04302366,
+    "percent_change_7d": -14.62142876,
+    "circulating_supply": 120609221.72401948
+  },
+  "SOL": {
+    "name": "Solana",
+    "symbol": "SOL",
+    "category": "coin",
+    "price_usd": 125.42666891497464,
+    "market_cap": 63890338987.057816,
+    "volume_24h": 4406915780.616531,
+    "percent_change_24h": 1.23489441,
+    "percent_change_7d": -15.63336543,
+    "circulating_supply": 509384005.3295872
+  },
+  "SUI": {
+    "name": "Sui",
+    "symbol": "SUI",
+    "category": "coin",
+    "price_usd": 2.2575858476592097,
+    "market_cap": 7156197318.47226,
+    "volume_24h": 975689758.6265318,
+    "percent_change_24h": 3.5047669,
+    "percent_change_7d": -12.19958229,
+    "circulating_supply": 3169845047.4838877
+  },
+  "MKR": {
+    "name": "Maker",
+    "symbol": "MKR",
+    "category": "token",
+    "price_usd": 1098.484008510461,
+    "market_cap": 935983123.2428112,
+    "volume_24h": 83285413.56370223,
+    "percent_change_24h": -2.22933089,
+    "percent_change_7d": -22.89353653,
+    "circulating_supply": 852068.04649983
+  },
+  "SKY": {
+    "name": "Sky",
+    "symbol": "SKY",
+    "category": "token",
+    "price_usd": 0.045199949141691044,
+    "market_cap": 0,
+    "volume_24h": 7730413.96129427,
+    "percent_change_24h": -3.47275234,
+    "percent_change_7d": -24.26938419,
+    "circulating_supply": 0
+  }
+}
