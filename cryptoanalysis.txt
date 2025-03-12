@@ -1,0 +1,191 @@
+Crypto investing today lacks fundamental clarity. Most retail investors rely on speculative trends, social media narratives, and price action rather than real financial data. Unlike equities, where earnings, revenue, and valuation multiples guide decision-making, crypto largely operates without standardized fundamental benchmarks.
+The goal is to build a data-driven platform that helps investors analyze crypto projects objectively—without hype, influencer bias, or short-term speculation.
+
+What kind of revenue?
+Not all revenue is created equal. Revenue that depends on temporary token incentives or unsustainable yields differs from stable, organic revenue. Developing a "revenue quality score" could add significant value.
+
+Context to Raw Numbers
+Raw revenue numbers need context. For example, a protocol generating $1M in revenue might seem impressive, but if it required $10M in incentives to generate that revenue, the economics are actually negative. Consider including:
+Revenue sustainability metrics
+Cost to generate revenue (when measurable)
+Revenue concentration (does it come from many users or a few whales?)
+
+Benchmark Against Comparable Protocols
+Revenue-to-market-cap for a DEX should be compared to other DEXs, not to lending platforms. Creating sector-specific benchmarks would help users understand if a project is undervalued relative to its peers.
+
+Offering simple analysis alongside the data (e.g., "This protocol's revenue grew 15% this quarter while competitors declined") would make the platform more accessible.
+
+Fundamental Clarity in a Speculative Market – Most crypto investors make decisions based on narratives, memes, and price action. Your platform provides real, structured financial insights.
+Revenue-Based Valuation Models – Unlike traditional stock valuation models, crypto still lacks standardized Price-to-Earnings or Revenue Multiples—this alone is a big differentiation.
+Portfolio Rebalancer & Project Comparison – A tool that removes emotion from investing and encourages rational decision-making is valuable.
+
+Don’t Compete with Dune or DefiLlama—Go Deeper
+Dune and DeFi Llama already provide on-chain financial metrics, but they require users to build their own dashboards.
+Solution: Instead of making another dashboard tool, curate structured insights with pre-built screens for investors who don’t want to query data manually.
+
+
+Our revenue model –
+B2B API Access: Hedge funds, institutions might pay for access.
+
+
+Problem Statement
+Current cryptocurrency investment decisions are predominantly based on speculative metrics rather than fundamental financial data. While traditional financial markets utilize standardized valuation frameworks such as price-to-earnings ratios and revenue multiples, cryptocurrency markets lack equivalent fundamental analysis tools. This information asymmetry creates several issues:
+Investment decisions driven by narrative rather than economic reality
+Difficulty in objectively comparing projects across similar categories
+Limited ability to assess project sustainability through revenue analysis
+Overreliance on metrics (TVL, transaction count) that can be manipulated
+The absence of standardized fundamental analysis creates market inefficiencies and impedes rational capital allocation.
+However, raw revenue numbers alone do not provide meaningful insights. Without an understanding of how revenue is generated, its sustainability, and its relationship to project valuation, investors lack a reliable framework for assessing long-term value.
+
+Proposed Approach: A Fundamental Analysis Platform for Crypto by House Of Web3
+
+
+A structured platform that enables investors to evaluate crypto assets based on:
+Revenue Quality & Sustainability
+Distinguishing organic revenue from token-incentivized revenue.
+Evaluating the cost-to-revenue ratio—determining how much a protocol is spending to generate revenue.
+Assessing revenue concentration—is the project’s revenue dependent on a small number of participants or a broad user base?
+
+
+
+
+Contextualizing Revenue in Relation to Costs
+$1M in revenue may not be meaningful if it required $10M in incentives.
+Identifying negative unit economics in token-based revenue models.
+Providing sector-specific benchmarks—a DEX should not be compared to a lending protocol.
+
+
+Comparative Analysis of Competing Protocols
+A side-by-side comparison tool that allows investors to evaluate multiple projects simultaneously.
+Identifying outperformers within a specific category.
+Understanding market positioning through financial indicators rather than sentiment.
+
+
+
+How This Differs from Existing Tools
+Feature
+Existing Solutions
+Proposed Platform
+On-Chain Metrics
+Dune, DeFiLlama provide raw data
+Structured insights, eliminating the need for manual analysis
+Revenue Analysis
+Limited insights into revenue sustainability
+Differentiates organic vs. incentive-driven revenue
+Valuation Models
+Price-based comparisons
+Fundamental-driven valuation benchmarks
+Comparative Analysis
+Requires manual data extraction
+Automated head-to-head project comparisons
+
+
+
+Revenue Classification Framework
+We will classify revenue using the following taxonomy:
+Sustainable Revenue
+User fees paid for actual service utilization
+Recurring revenue streams not dependent on token incentives
+Revenue that persists independent of token price appreciation
+Unsustainable Revenue
+Temporary yield farming incentives
+Revenue dependent on token emissions
+Fee generation that requires ongoing subsidization
+
+Where other crypto projects cannot retain users because they lack any great revenue backing the token price to pump. 
+Core Analytical Components
+Revenue Quality Assessment
+Sustainability score based on incentive dependency
+Analysis of revenue generation costs
+Evaluation of revenue concentration/diversification
+Comparative Analysis
+Sector-specific revenue multiple benchmarks
+Relative valuation within comparable protocol categories
+Historical trend comparison among competitors
+Trend Analysis
+Month-over-month and quarter-over-quarter growth metrics
+Seasonally adjusted revenue trends
+Revenue stability measurements
+
+Target Users
+Retail investors seeking a structured approach to crypto valuation.
+Institutional investors requiring standardized financial data.
+Analysts and researchers who need clear comparative insights.
+
+
+Fundamental Clarity in a Speculative Market
+By asking HOW.
+
+_______________________________________________________________________
+
+Tired of meme coins and influencer shills?
+Want to invest based on actual revenue and sustainability, not speculation?
+House of Web3 is building a first-of-its-kind crypto fundamentals platform—a data-driven approach to analyzing projects without hype or manipulated metrics.
+
+_______________________________________________________________________
+💡 The Problem: Crypto Investing Is Broken
+Most investors rely on price charts, Twitter narratives, and TVL numbers, but:
+🚨 Revenue numbers are misleading—Did the project actually make money, or was it token incentives?
+ 🚨 No easy way to compare projects—How does one DEX’s revenue compare to another’s?
+ 🚨 Crypto lacks real valuation benchmarks—Unlike stocks, there’s no P/E ratio or revenue multiple.
+🔍 What if you had a clear, structured way to evaluate crypto projects based on their actual fundamentals?
+
+📊 Our Solution: A Smarter Way to Analyze Crypto
+We’re building a research-backed analytics platform to help you:
+✅ Distinguish real vs. artificial revenue – Know if revenue is sustainable or just incentives.
+ ✅ Compare projects within their category – See how a DEX stacks up against another DEX, not a lending protocol.
+ ✅ Understand if a token is fairly valued – Revenue-to-market-cap, sustainability scores & more.
+ ✅ Side-by-side project comparison – A simple way to compare up to 3 crypto projects.
+
+🔬 How This Differs from Existing Tools
+Feature
+Existing Solutions
+Our Approach
+On-Chain Metrics
+Dune, DeFiLlama provide raw data
+Structured insights, eliminating manual analysis
+Revenue Analysis
+Limited insights into revenue sustainability
+Differentiates organic vs. incentive-driven revenue
+Valuation Models
+Price-based comparisons
+Revenue-driven valuation benchmarks
+Comparative Analysis
+Requires manual data extraction
+Automated project comparisons
+
+
+
+
+
+
+
+
+
+
+
+
+Protocol Comparisons (Compare top 5 Defi Platforms + Sonic  by Mcap, Annual Revenue, QOQ revenue growth, Sustainability, Token type (governance, etc) , Overall rating) 
+
+Aave
+LIDO 
+Eigen 
+MKR
+Compound 
+Fluid 
+Jupiter
+Sonic
+________________________________________________________________________
+
+Show bubble map of contributions to revenue 
+
+Sol, ETH, SUI
+
+
+We are seeking contributors, researchers, and analysts who believe in bringing financial rigor to crypto investing.
+
+
+
+
+
+

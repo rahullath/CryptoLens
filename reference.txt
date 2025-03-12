@@ -1,0 +1,393 @@
+# Crypto Revenue Analyzer - Reference Information
+
+## Project Overview
+The Crypto Revenue Analyzer is a tool for analyzing revenue data from various DeFi protocols across multiple blockchains, with a focus on Ethereum, Solana, and other EVM-compatible chains. The project aims to collect accurate revenue data directly from blockchain explorers rather than relying on potentially inaccurate aggregator data.
+
+## Project Structure
+- src/ (source code)
+- data/ (collected data storage)
+- visualizations/ (output visualizations)
+
+## Key Files
+- config.py: Configuration settings for protocols and APIs
+- data_collector.py: General data collection from CoinGecko and DeFi Llama
+- blockchair_collector.py: Direct blockchain data collection using Blockchair API
+- etherscan_collector.py: Ethereum data collection using Etherscan API
+- visualizer.py: Creates protocol comparison table and revenue bubble map
+- main.py: Orchestrates the entire process
+- collect_ethereum_data.py: Script for collecting Ethereum protocol data
+
+## APIs Used
+
+### 1. Etherscan API
+- **Base URL**: https://api.etherscan.io/api
+- **Documentation**: https://docs.etherscan.io/
+- **API Key**: Required, stored in .env file as ETHERSCAN_API_KEY
+- **Rate Limits**: 5 calls/sec, 100,000 calls/day for free tier
+- **Pagination**: Limited to 10,000 results per request, requires pagination for complete data
+
+#### Supported Chains and Endpoints
+- Ethereum: https://api.etherscan.io/api
+- Arbitrum: https://api.arbiscan.io/api
+- Optimism: https://api.optimistic.etherscan.io/api
+- Polygon: https://api.polygonscan.com/api
+- Base: https://api.basescan.org/api
+- Avalanche: https://api.snowtrace.io/api
+- BSC: https://api.bscscan.com/api
+- Fantom: https://api.ftmscan.com/api (sonic)
+
+Full list of supported endpoints across chains: https://forms.blockscan.com/public/grid/3E9QiN00NLhCQVibiP3Z-Bpqhmd7zGXsgapEKJupxiI
+
+#### Key Endpoints
+1. **Account Transactions**:
+   - `?module=account&action=txlist&address={address}&startblock={startblock}&endblock={endblock}&sort=asc&apikey={apikey}`
+   - Returns normal transactions for an address
+
+2. **Internal Transactions**:
+   - `?module=account&action=txlistinternal&address={address}&startblock={startblock}&endblock={endblock}&sort=asc&apikey={apikey}`
+   - Returns internal transactions for an address
+
+3. **Contract Events**:
+   - `?module=logs&action=getLogs&address={address}&fromBlock={fromBlock}&toBlock={toBlock}&topic0={topic0}&apikey={apikey}`
+   - Returns events emitted by a contract
+
+### 2. Blockchair API
+- **Base URL**: https://api.blockchair.com
+- **Documentation**: https://blockchair.com/api/docs
+- **API Key**: Required, stored in .env file as BLOCKCHAIR_API_KEY
+- **Supported Chains**: Ethereum, Solana, Bitcoin, and others
+
+### 3. CoinGecko API
+- **Base URL**: https://api.coingecko.com/api/v3
+- **Documentation**: https://www.coingecko.com/api/documentation
+- **API Key**: Optional, stored in .env file as COINGECKO_API_KEY
+- **Rate Limits**: 10-50 calls/minute without API key
+
+### 4. DeFi Llama API
+- **Base URL**: https://api.llama.fi
+- **Documentation**: https://defillama.com/docs/api
+- **API Key**: Not required
+- **Rate Limits**: Reasonable usage
+
+## Protocol Information
+
+### Ethereum Protocols
+
+1. **Lido (LIDO)**
+   - **Main Contract**: 0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84 (stETH)
+   - **DAO Treasury**: 0x442af784A788A5bd6F42A01Ebe9F287a871243fb
+   - **Token Contract**: 0x5a98fcbea516cf06857215779fd812ca3bef1b32 (LDO)
+   - **Revenue Model**: 10% of staking rewards go to the DAO
+   - **DeFi Llama Stats**:
+     - Fees (24h): ~2.6 million USD
+     - Revenue (24h): ~262,179 USD
+     - Market Cap: ~800 million USD
+     - Fees (7d): ~13.64 million USD
+     - Revenue (7d): ~1.36 million USD
+     - Fees (30d): ~63.61 million USD
+     - Revenue (30d): ~6.36 million USD
+     - Fees (1y): ~1.017 billion USD
+     - Revenue (1y): ~101.67 million USD
+     - Cumulative Fees: ~2.295 billion USD
+
+2. **Aave**
+   - **Ethereum V2 LendingPool**: 0x7d2768dE32b0b80b7a3454c06BdAc94A69DDc7A9
+   - **Ethereum V3 LendingPool**: 0x87870Bca3F3fD6335C3F4ce8392D69350B4fA4E2
+   - **Revenue Model**: 9% of protocol fees go to the DAO
+
+3. **EigenLayer**
+   - **Strategy Manager**: 0x858646372CC42E1A627fcE94aa7A7033e7CF075A
+   - **Delegation Manager**: 0x39053D51B77DC0d36036Fc1fCc8Cb819df8Ef37A
+
+4. **MakerDAO (MKR)**
+   - **PSM**: 0x9759A6Ac90977b93B58547b4A71c78317f391A28
+   - **Vat (CDP Engine)**: 0x35D1b3F3D7966A1DFe207aa4514C12a259A0492B
+
+5. **Compound**
+   - **Comptroller**: 0x3d9819210A31b4961b30EF54bE2aeD79B9c9Cd3B
+   - **cUSDC**: 0xbEb5Fc579115071764c7423A4f12eDde41f106Ed
+
+### Solana Protocols
+- **Jupiter**
+
+FLUID -
+
+## Revenue Calculation Methodology
+
+### General Approach
+- **Fees**: Total protocol fees generated (e.g., staking rewards, lending interest, trading fees)
+- **Revenue**: Portion of fees that goes to the protocol/DAO
+
+### Protocol-Specific Methodologies
+
+1. **Lido**:
+   - **Fees**: Staking rewards earned by all staked ETH
+   - **Revenue**: 10% of staking rewards that go to the DAO
+   - **Data Source**: Tracking staking events and reward distributions
+
+2. **Aave**:
+   - **Fees**: Interest paid by borrowers
+   - **Revenue**: Reserve factor portion of interest (varies by market)
+   - **Data Source**: Lending pool transactions and events
+
+3. **Compound**:
+   - **Fees**: Interest paid by borrowers
+   - **Revenue**: Reserve factor portion of interest
+   - **Data Source**: Comptroller and cToken transactions
+
+## API Limitations and Issues
+
+1. **Etherscan API**:
+   - Limited to 10,000 transactions per request
+   - Requires pagination for complete data
+   - Rate limiting can cause issues during heavy data collection
+
+2. **CoinGecko API**:
+   - Rate limiting issues encountered during data collection
+   - Free tier has significant limitations
+
+## Implementation Notes
+
+### Pagination for Etherscan API
+To get complete transaction data, implement pagination:
+- Use page and offset parameters
+- Continue fetching until no more results
+- Add delay between requests to avoid rate limiting
+
+### Time-Based Analysis
+For accurate time-based revenue analysis:
+- Filter transactions by timestamp
+- Group by day/week/month for trend analysis
+- Support different time periods (24h, 7d, 30d, 1y, all)
+
+### Revenue Calculation Improvements
+For more accurate revenue calculations:
+- Use contract-specific events rather than just transactions
+- Implement protocol-specific calculation logic
+- Track actual revenue events rather than estimating from transaction volume
+
+
+It's great that we are able to find the revenue
+but it's considering a weird amount of transactions
+13041  - 
+and the revenue we got from that is 9million approx (eth to usd)
+
+now is this revenue for 1d 1week 1month, 1year or all time?? how do we check
+what is it considering as revenue?
+
+
+For example - if I go to defillama-
+"It's using - https://etherscan.io/token/0x5a98fcbea516cf06857215779fd812ca3bef1b32
+ 1,272,177 transactions found in this contract
+lido - 2.6 million (24h) fees, revenue 262179
+market cap - 800m
+fees 7d - 13.64m
+revenue - 1.36m
+
+fees 30d - 63.61m
+revenue 30d  -6.36m
+
+fees 1y - 1.017B
+revenue - 101.67m
+
+cumulative fees 2.295 billion
+
+
+
+Fees: Staking rewards earned by all staked ETH
+
+Revenue: Staking reward
+Methodology"
+
+I am not saying the numbers should be same, but it needs more clarity
+
+
+1) Bubblemap is the least priority right now, unless it's easy after collecting data?
+
+2) https://blockchair.com/api/docs
+https://docs.coingecko.com/v3.0.1/reference/authentication
+https://docs.etherscan.io/etherscan-v2
+
+for solscan we just have publicap
+
+https://public-api.solscan.io/chaininfo
+const requestOptions = {
+  method: "get",
+  headers: {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjcmVhdGVkQXQiOjE3NDE3NTkxNzA1NzYsImVtYWlsIjoidXBsb2FkZXJrdW4yQGdtYWlsLmNvbSIsImFjdGlvbiI6InRva2VuLWFwaSIsImFwaVZlcnNpb24iOiJ2MiIsImlhdCI6MTc0MTc1OTE3MH0.yX5bkGiTKaWyaUVKsShOMR0yD0pZYi228FyqHm2TV6o"}
+}
+
+fetch("https://public-api.solscan.io/chaininfo", requestOptions)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
+    
+
+then the protocols - 
+
+"https://aave.com/docs/resources/addresses"
+https://docs.lido.fi/deployed-contracts/
+https://github.com/Layr-Labs/eigenlayer-contracts
+https://chainlog.sky.money/api.html (maker)
+https://docs.compound.finance/#protocol-contracts
+https://github.com/Instadapp/fluid-contracts-public/blob/main/deployments/deployments.md (it has nothing to do with solana)
+https://station.jup.ag/docs/ (not sure, but their free version requires no api key)
+
+Now, let's start with ETHEREUM please
+
+focus on collecting data - and sorting it
+that's all
+
+https://api.etherscan.io/v2/chainlist
+https://docs.etherscan.io/etherscan-v2/getting-started/supported-chains
+https://docs.etherscan.io/etherscan-v2
+
+ETHERSCAN V2 API alone has 50+EVM Chains, so it should support sonic, and other EVM based DeFi protocols
+
+
+
+ORIGINAL VERSION OF THIS PLAN - before changes
+
+"## ⚡️ Protocol Comparison (DIY Accurate Edition):
+
+### Protocols:
+- **Aave**
+- **Lido**
+- **EigenLayer**
+- **Maker (MKR)**
+- **Compound**
+- **Fluid**
+- **Jupiter**
+- **Sonic**
+
+### Metrics Needed:
+- Market Cap
+- Annual Revenue
+- Quarter-on-Quarter (QoQ) Revenue Growth
+- Sustainability (Revenue vs. incentives)
+- Token Type (Governance, Utility, etc.)
+- Overall Rating (can be qualitative or community-based)
+
+---
+
+## 🛠️ How to Fetch Accurate Revenue Data Directly from Blockchain:
+
+Here’s a step-by-step, no-BS approach to bypass unreliable aggregators:
+
+### Step 1: Identify Revenue Sources for Each Protocol  
+Each protocol earns revenue differently:
+- **Lido**: Primarily from ETH staking rewards
+- **Aave, Compound**: Interest fees from borrowing
+- **Maker**: Stability fees from DAI borrowing
+- **EigenLayer**: Restaking yield
+- **Fluid**: Interest yield optimization
+- **Jupiter & Sonic**: Trading/Swap fees from decentralized exchange activity
+
+---
+
+### Step 2: Direct Blockchain Analysis (Chain-specific):
+
+### Ethereum Protocols (Lido, Aave, Compound, Maker, EigenLayer):
+- Go to [Etherscan.io](https://etherscan.io)
+- Identify main contract addresses for each protocol’s revenue collection or treasury:
+  - **Lido**: Staking reward distribution contract ([Main Contracts here](https://docs.lido.fi/contracts/))
+  - **Aave**: Lending pool contracts ([Aave Docs](https://docs.aave.com/developers/deployed-contracts/v3-mainnet))
+  - **Compound**: Comptroller/Treasury contracts ([Compound Docs](https://docs.compound.finance/))
+  - **Maker**: Maker Vault & Stability Fee contracts ([Maker Docs](https://docs.makerdao.com/smart-contract-modules))
+  - **EigenLayer**: Restaking pools ([EigenLayer Contracts](https://docs.eigenlayer.xyz/))
+- Use internal transaction history & event logs (ERC20 Transfers, "Revenue" tagged events) to calculate exact revenue flows.
+
+### Solana Protocols (Jupiter, Fluid, Sonic):
+- Go to [Solscan.io](https://solscan.io)
+- Identify main program IDs & associated accounts holding fees:
+  - **Jupiter**: Swaps liquidity pool contracts ([Jupiter Docs](https://docs.jup.ag))
+  - **Fluid**: Yield vault accounts ([Fluid Docs](https://docs.fluidity.money/))
+  - **Sonic**: Pool fee accounts ([Sonic GitHub/Docs](https://github.com/sonicdex))
+- Check token transfers and SOL transaction events (fee accounts).
+
+---
+
+## 🎯 Exactly How to Track Revenue (Example: Lido):
+- Find the **Lido Fee Recipient contract** (staking fee vault).
+- Track weekly/monthly ETH inflows and stablecoin conversions.
+- Annualize monthly inflows to calculate yearly revenue accurately.
+
+**Example Approach on Etherscan**:
+```
+Contract → Analytics → Internal TXs → Filter by date range → Export CSV → Sum transfers.
+```
+
+Repeat similarly for other protocols.
+
+---
+
+## 📊 Bubble Map of Revenue Contributions (SOL, ETH, SUI):
+To show revenue breakdown visually:
+
+- **Data Needed**: Revenue earned in each ecosystem (ETH, SOL, SUI)
+- **Bubble Map Tool**:
+  - Use tools like:
+    - Flourish Studio ([flourish.studio](https://flourish.studio))
+    - Datawrapper ([datawrapper.de](https://datawrapper.de))
+
+### Data Format for Bubble Map:
+| Protocol | Blockchain | Revenue ($) | % Contribution |
+|----------|------------|--------------|----------------|
+| Lido     | ETH        | $XXM         | XX%            |
+| Jupiter  | SOL        | $XXM         | XX%            |
+| Sonic    | SUI        | $XXK         | XX%            |
+
+- Bubble size → Revenue amount
+- Bubble position → Blockchain (ETH, SOL, SUI clusters)
+
+---
+
+## 🧑‍💻 DIY SQL-Style Queries for Explorer (Advanced):
+- You can use Dune Analytics ([dune.com](https://dune.com)) for Ethereum and Solana queries if comfortable with SQL.
+- Cross-verify exported CSV data from Etherscan or Solscan.
+
+Sample SQL Query (for ETH staking rewards distribution):
+
+```sql
+SELECT
+  SUM(value) AS total_revenue_eth,
+  DATE_TRUNC('month', block_time) AS month
+FROM ethereum.traces
+WHERE to = 'Lido_Fee_Address'
+GROUP BY month
+ORDER BY month DESC
+```
+
+*(Replace `Lido_Fee_Address` with actual contract address.)*
+
+---
+
+## 📌 Resources to Bookmark:
+- **Ethereum**:
+  - [etherscan.io](https://etherscan.io)
+  - [Dune Analytics](https://dune.com)
+- **Solana**:
+  - [solscan.io](https://solscan.io)
+  - [Solana.fm](https://solana.fm)
+
+---
+
+## 🚩 Challenges to Watch Out For:
+- Protocols might have multiple fee-collecting contracts—confirm from docs/community channels.
+- Revenue might appear in various tokens; standardize to USD for consistency (use CoinGecko historical prices).
+
+---
+
+## 🔥 Final Steps (TL;DR Checklist):
+
+✅ Identify primary revenue contracts  
+✅ Directly analyze internal transactions  
+✅ Calculate revenue & convert to USD  
+✅ Visualize data using bubble maps or charts  
+✅ Cross-verify with community sources & docs
+
+---
+
+## 🌟 House of Web3's Pro Tip:
+Direct blockchain analysis is hardcore but ensures you're not getting played by aggregators. Dive in, get those juicy accurate numbers, and watch the alpha roll in! 🚀✨
+
+*Ready to dive deep or need more HOW-to guides on specific protocols? Just shout HOW??? 😉"
