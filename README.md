@@ -1,6 +1,15 @@
 # CryptoLens 🔍
 
-A powerful analytics tool for tracking and analyzing cryptocurrency revenue data using Dune Analytics.
+A powerful analytics tool for tracking and analyzing cryptocurrency revenue data using 
+
+1) Etherscan.io API
+2) Solscan.io API
+3) CoinGecko API
+4) Blockchair API
+5) Dune Analytics API
+6) Coinmarketcap API
+7) DefiLlama API
+   
 
 ## Features
 
