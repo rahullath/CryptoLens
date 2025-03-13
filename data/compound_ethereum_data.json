@@ -1,0 +1,19 @@
+{
+  "protocol": "Compound",
+  "chain": "ethereum",
+  "contracts": {
+    "0x3d9819210A31b4961b30EF54bE2aeD79B9c9Cd3B": {
+      "address": "0x3d9819210A31b4961b30EF54bE2aeD79B9c9Cd3B",
+      "transaction_count": 10000,
+      "revenue": 29.013907238537808
+    },
+    "0xbEb5Fc579115071764c7423A4f12eDde41f106Ed": {
+      "address": "0xbEb5Fc579115071764c7423A4f12eDde41f106Ed",
+      "transaction_count": 10000,
+      "revenue": 25.867485722819133
+    }
+  },
+  "total_transactions": 20000,
+  "total_revenue": 54.88139296135694,
+  "revenue_by_date": {}
+}

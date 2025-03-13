@@ -5,7 +5,7 @@
     "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84": {
       "address": "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84",
       "transaction_count": 10000,
-      "revenue": 5272.361385948629
+      "revenue": 5582.538620695501
     },
     "0x442af784A788A5bd6F42A01Ebe9F287a871243fb": {
       "address": "0x442af784A788A5bd6F42A01Ebe9F287a871243fb",
@@ -14,6 +14,6 @@
     }
   },
   "total_transactions": 13041,
-  "total_revenue": 5272.361385948629,
+  "total_revenue": 5582.538620695501,
   "revenue_by_date": {}
 }

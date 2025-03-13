@@ -1,0 +1,19 @@
+{
+  "protocol": "Eigen",
+  "chain": "ethereum",
+  "contracts": {
+    "0x858646372CC42E1A627fcE94aa7A7033e7CF075A": {
+      "address": "0x858646372CC42E1A627fcE94aa7A7033e7CF075A",
+      "transaction_count": 10000,
+      "revenue": 4.756035661907934
+    },
+    "0x39053D51B77DC0d36036Fc1fCc8Cb819df8Ef37A": {
+      "address": "0x39053D51B77DC0d36036Fc1fCc8Cb819df8Ef37A",
+      "transaction_count": 10000,
+      "revenue": 2.24105575379135
+    }
+  },
+  "total_transactions": 20000,
+  "total_revenue": 6.997091415699284,
+  "revenue_by_date": {}
+}

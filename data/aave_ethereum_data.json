@@ -1,0 +1,19 @@
+{
+  "protocol": "Aave",
+  "chain": "ethereum",
+  "contracts": {
+    "0x7d2768dE32b0b80b7a3454c06BdAc94A69DDc7A9": {
+      "address": "0x7d2768dE32b0b80b7a3454c06BdAc94A69DDc7A9",
+      "transaction_count": 10000,
+      "revenue": 0.0
+    },
+    "0x87870Bca3F3fD6335C3F4ce8392D69350B4fA4E2": {
+      "address": "0x87870Bca3F3fD6335C3F4ce8392D69350B4fA4E2",
+      "transaction_count": 10000,
+      "revenue": 0.0
+    }
+  },
+  "total_transactions": 20000,
+  "total_revenue": 0.0,
+  "revenue_by_date": {}
+}

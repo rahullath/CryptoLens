@@ -1,8 +1,8 @@
 {
   "protocol": "LIDO",
   "chain": "ethereum",
-  "time_period": "30d",
-  "analysis_date": "2025-03-13 12:48:37",
+  "time_period": "1y",
+  "analysis_date": "2025-03-13 12:49:41",
   "contracts": {
     "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84": {
       "address": "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84",

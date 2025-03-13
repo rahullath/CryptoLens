@@ -1,0 +1,139 @@
+{
+  "Aave": {
+    "ethereum": {
+      "protocol": "Aave",
+      "chain": "ethereum",
+      "contracts": {
+        "0x7d2768dE32b0b80b7a3454c06BdAc94A69DDc7A9": {
+          "address": "0x7d2768dE32b0b80b7a3454c06BdAc94A69DDc7A9",
+          "transaction_count": 10000,
+          "revenue": 0.0
+        },
+        "0x87870Bca3F3fD6335C3F4ce8392D69350B4fA4E2": {
+          "address": "0x87870Bca3F3fD6335C3F4ce8392D69350B4fA4E2",
+          "transaction_count": 10000,
+          "revenue": 0.0
+        }
+      },
+      "total_transactions": 20000,
+      "total_revenue": 0.0,
+      "revenue_by_date": {}
+    },
+    "optimism": {
+      "protocol": "Aave",
+      "chain": "optimism",
+      "contracts": {},
+      "total_transactions": 0,
+      "total_revenue": 0,
+      "revenue_by_date": {}
+    },
+    "arbitrum": {
+      "protocol": "Aave",
+      "chain": "arbitrum",
+      "contracts": {},
+      "total_transactions": 0,
+      "total_revenue": 0,
+      "revenue_by_date": {}
+    },
+    "polygon": {
+      "protocol": "Aave",
+      "chain": "polygon",
+      "contracts": {},
+      "total_transactions": 0,
+      "total_revenue": 0,
+      "revenue_by_date": {}
+    }
+  },
+  "LIDO": {
+    "ethereum": {
+      "protocol": "LIDO",
+      "chain": "ethereum",
+      "contracts": {
+        "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84": {
+          "address": "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84",
+          "transaction_count": 10000,
+          "revenue": 5582.538620695501
+        },
+        "0x442af784A788A5bd6F42A01Ebe9F287a871243fb": {
+          "address": "0x442af784A788A5bd6F42A01Ebe9F287a871243fb",
+          "transaction_count": 3041,
+          "revenue": 0.0
+        }
+      },
+      "total_transactions": 13041,
+      "total_revenue": 5582.538620695501,
+      "revenue_by_date": {}
+    }
+  },
+  "Eigen": {
+    "ethereum": {
+      "protocol": "Eigen",
+      "chain": "ethereum",
+      "contracts": {
+        "0x858646372CC42E1A627fcE94aa7A7033e7CF075A": {
+          "address": "0x858646372CC42E1A627fcE94aa7A7033e7CF075A",
+          "transaction_count": 10000,
+          "revenue": 4.756035661907934
+        },
+        "0x39053D51B77DC0d36036Fc1fCc8Cb819df8Ef37A": {
+          "address": "0x39053D51B77DC0d36036Fc1fCc8Cb819df8Ef37A",
+          "transaction_count": 10000,
+          "revenue": 2.24105575379135
+        }
+      },
+      "total_transactions": 20000,
+      "total_revenue": 6.997091415699284,
+      "revenue_by_date": {}
+    }
+  },
+  "MKR": {
+    "ethereum": {
+      "protocol": "MKR",
+      "chain": "ethereum",
+      "contracts": {
+        "0x9759A6Ac90977b93B58547b4A71c78317f391A28": {
+          "address": "0x9759A6Ac90977b93B58547b4A71c78317f391A28",
+          "transaction_count": 4553,
+          "revenue": 38.34268441935693
+        },
+        "0x35D1b3F3D7966A1DFe207aa4514C12a259A0492B": {
+          "address": "0x35D1b3F3D7966A1DFe207aa4514C12a259A0492B",
+          "transaction_count": 2390,
+          "revenue": 12.983639835677897
+        }
+      },
+      "total_transactions": 6943,
+      "total_revenue": 51.32632425503483,
+      "revenue_by_date": {}
+    }
+  },
+  "Compound": {
+    "ethereum": {
+      "protocol": "Compound",
+      "chain": "ethereum",
+      "contracts": {
+        "0x3d9819210A31b4961b30EF54bE2aeD79B9c9Cd3B": {
+          "address": "0x3d9819210A31b4961b30EF54bE2aeD79B9c9Cd3B",
+          "transaction_count": 10000,
+          "revenue": 29.013907238537808
+        },
+        "0xbEb5Fc579115071764c7423A4f12eDde41f106Ed": {
+          "address": "0xbEb5Fc579115071764c7423A4f12eDde41f106Ed",
+          "transaction_count": 10000,
+          "revenue": 25.867485722819133
+        }
+      },
+      "total_transactions": 20000,
+      "total_revenue": 54.88139296135694,
+      "revenue_by_date": {}
+    },
+    "polygon": {
+      "protocol": "Compound",
+      "chain": "polygon",
+      "contracts": {},
+      "total_transactions": 0,
+      "total_revenue": 0,
+      "revenue_by_date": {}
+    }
+  }
+}

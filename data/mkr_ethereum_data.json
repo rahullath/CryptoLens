@@ -1,0 +1,19 @@
+{
+  "protocol": "MKR",
+  "chain": "ethereum",
+  "contracts": {
+    "0x9759A6Ac90977b93B58547b4A71c78317f391A28": {
+      "address": "0x9759A6Ac90977b93B58547b4A71c78317f391A28",
+      "transaction_count": 4553,
+      "revenue": 38.34268441935693
+    },
+    "0x35D1b3F3D7966A1DFe207aa4514C12a259A0492B": {
+      "address": "0x35D1b3F3D7966A1DFe207aa4514C12a259A0492B",
+      "transaction_count": 2390,
+      "revenue": 12.983639835677897
+    }
+  },
+  "total_transactions": 6943,
+  "total_revenue": 51.32632425503483,
+  "revenue_by_date": {}
+}
