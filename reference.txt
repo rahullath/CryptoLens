@@ -167,15 +167,6 @@ For more accurate revenue calculations:
 - Track actual revenue events rather than estimating from transaction volume
 
 
-It's great that we are able to find the revenue
-but it's considering a weird amount of transactions
-13041  - 
-and the revenue we got from that is 9million approx (eth to usd)
-
-now is this revenue for 1d 1week 1month, 1year or all time?? how do we check
-what is it considering as revenue?
-
-
 For example - if I go to defillama-
 "It's using - https://etherscan.io/token/0x5a98fcbea516cf06857215779fd812ca3bef1b32
  1,272,177 transactions found in this contract
@@ -198,50 +189,6 @@ Fees: Staking rewards earned by all staked ETH
 
 Revenue: Staking reward
 Methodology"
-
-I am not saying the numbers should be same, but it needs more clarity
-
-
-1) Bubblemap is the least priority right now, unless it's easy after collecting data?
-
-2) https://blockchair.com/api/docs
-https://docs.coingecko.com/v3.0.1/reference/authentication
-https://docs.etherscan.io/etherscan-v2
-
-for solscan we just have publicap
-
-https://public-api.solscan.io/chaininfo
-const requestOptions = {
-  method: "get",
-  headers: {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjcmVhdGVkQXQiOjE3NDE3NTkxNzA1NzYsImVtYWlsIjoidXBsb2FkZXJrdW4yQGdtYWlsLmNvbSIsImFjdGlvbiI6InRva2VuLWFwaSIsImFwaVZlcnNpb24iOiJ2MiIsImlhdCI6MTc0MTc1OTE3MH0.yX5bkGiTKaWyaUVKsShOMR0yD0pZYi228FyqHm2TV6o"}
-}
-
-fetch("https://public-api.solscan.io/chaininfo", requestOptions)
-  .then(response => response.json())
-  .then(response => console.log(response))
-  .catch(err => console.error(err));
-    
-
-then the protocols - 
-
-"https://aave.com/docs/resources/addresses"
-https://docs.lido.fi/deployed-contracts/
-https://github.com/Layr-Labs/eigenlayer-contracts
-https://chainlog.sky.money/api.html (maker)
-https://docs.compound.finance/#protocol-contracts
-https://github.com/Instadapp/fluid-contracts-public/blob/main/deployments/deployments.md (it has nothing to do with solana)
-https://station.jup.ag/docs/ (not sure, but their free version requires no api key)
-
-Now, let's start with ETHEREUM please
-
-focus on collecting data - and sorting it
-that's all
-
-https://api.etherscan.io/v2/chainlist
-https://docs.etherscan.io/etherscan-v2/getting-started/supported-chains
-https://docs.etherscan.io/etherscan-v2
-
-ETHERSCAN V2 API alone has 50+EVM Chains, so it should support sonic, and other EVM based DeFi protocols
 
 
 
