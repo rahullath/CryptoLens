@@ -32,9 +32,9 @@ cd CryptoLens
 pip install -r requirements.txt
 ```
 
-3. Create a `.env` file in the project root with your Dune API key:
+3. Create a `.env` file in the project root with your Etherscan API key:
 ```
-DUNE_API_KEY=your_api_key_here
+ETHERSCAN_API_KEY=your_api_key_here
 ```
 
 ## Usage
